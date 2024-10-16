@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class TextFileExample {
 
-    public static void writeTextFile(String filePath, String data) {
+    public static void writeTextFile(String filePath, String data) { //ghi một chuỗi dữ liệu vào một file văn bản
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write(data);
             System.out.println("Ghi file text thành công.");
@@ -15,7 +15,7 @@ public class TextFileExample {
         }
     }
 
-    public static String readTextFile(String filePath) {
+    public static String readTextFile(String filePath) {  //đọc nội dung của một file văn bản và trả về dưới dạng chuỗi
         StringBuilder content = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;

@@ -46,9 +46,9 @@ public class FileDirectoryOperations {
     }
 
     public static void main(String[] args) {
-        String directoryPath = "path/to/directory";
+        String directoryPath = "D:\\GR1";
 
-        String filePath = "path/to/directory/filename.txt";
+        String filePath = "D:\\GR1\\nam.txt";
 
         System.out.println("Danh sách file và thư mục trong: " + directoryPath);
         listFilesAndDirectories(directoryPath);

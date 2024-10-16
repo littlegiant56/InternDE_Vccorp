@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class BinaryFileExample {
 
-    public static void writeBinaryFile(String filePath, int number, String text) {
+    public static void writeBinaryFile(String filePath, int number, String text) { //ghi dữ liệu vào file nhị phân
         try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(filePath))) {
             dos.writeInt(number);
             dos.writeUTF(text);
@@ -16,7 +16,7 @@ public class BinaryFileExample {
         }
     }
 
-    public static void readBinaryFile(String filePath) {
+    public static void readBinaryFile(String filePath) { //đọc dữ liệu từ file nhị phân
         try (DataInputStream dis = new DataInputStream(new FileInputStream(filePath))) {
             int number = dis.readInt();
             String text = dis.readUTF();
