@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Week2/AbstractFactory/AbstractFactory.iml" filepath="$PROJECT_DIR$/Week2/AbstractFactory/AbstractFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week2/Collection/Collection.iml" filepath="$PROJECT_DIR$/Week2/Collection/Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week2/Composite/Composite.iml" filepath="$PROJECT_DIR$/Week2/Composite/Composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/InternDE_Vccorp.iml" filepath="$PROJECT_DIR$/.idea/InternDE_Vccorp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week1/JavaIntern/JavaIntern.iml" filepath="$PROJECT_DIR$/Week1/JavaIntern/JavaIntern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week1/ReadWrite/ReadWrite.iml" filepath="$PROJECT_DIR$/Week1/ReadWrite/ReadWrite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week2/Serialize/Serialize.iml" filepath="$PROJECT_DIR$/Week2/Serialize/Serialize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week2/TemplateMethod/TemplateMethod.iml" filepath="$PROJECT_DIR$/Week2/TemplateMethod/TemplateMethod.iml" />
+    </modules>
+  </component>
+</project>

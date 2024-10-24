@@ -72,9 +72,11 @@ public class DataStructuresExample {
 
         // 3. Using HashSet to store Student objects (no duplicates)
         HashSet<Student> studentSet = new HashSet<>();
+//        studentSet.add(null);
+//        studentSet.add(null);
         studentSet.add(new Student("Nam", 20));
         studentSet.add(new Student("Huy", 21));
-        studentSet.add(new Student("Nam", 20)); // Will not be added again
+        studentSet.add(new Student("Na", 20)); // Will not be added again
         studentSet.add(new Student("Linh", 19));
 
         // Print the list of students in the HashSet
@@ -85,6 +87,8 @@ public class DataStructuresExample {
 
         // 4. Using ArrayList to store a list of students
         ArrayList<Student> students = new ArrayList<>();
+        students.add(null);
+        students.add(null);
         students.add(new Student("Nam", 20));
         students.add(new Student("Huy", 21));
         students.add(new Student("Linh", 19));
