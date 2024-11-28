@@ -41,7 +41,7 @@ Trong SQL, **optimizer** (bộ tối ưu hóa truy vấn) là một thành phầ
    - **Rule-based Optimizer (RBO):** Dựa trên tập hợp các quy tắc cố định để tối ưu hóa truy vấn, không xem xét các yếu tố như thống kê hay dữ liệu hiện tại trong cơ sở dữ liệu.
    - **Cost-based Optimizer (CBO):** Dựa trên ước lượng chi phí thực hiện để lựa chọn kế hoạch tối ưu nhất. Đây là phương pháp phổ biến hiện nay, vì nó sử dụng các thống kê về dữ liệu để đưa ra quyết định tối ưu hơn.
 
-## 4. Lợi ích của Optimizer trong SQL
+   ## 4. Lợi ích của Optimizer trong SQL
    - **Tăng hiệu suất truy vấn:** Optimizer giúp tăng tốc độ thực thi của các câu truy vấn phức tạp bằng cách chọn phương án tối ưu nhất.
    - **Giảm tải tài nguyên:** Bằng cách chọn kế hoạch thực thi ít tốn tài nguyên nhất, optimizer giúp giảm thiểu việc sử dụng CPU, bộ nhớ và I/O.
    - **Tự động hóa tối ưu hóa:** Người dùng không cần phải viết lại truy vấn SQL, optimizer sẽ tự động chọn phương án tối ưu hóa nhất cho truy vấn đó.

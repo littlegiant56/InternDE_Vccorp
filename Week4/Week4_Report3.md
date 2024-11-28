@@ -125,4 +125,4 @@
 
 - Thỏa mãn điều kiện của 2NF.
 - Loại bỏ phụ thuộc bắc cầu (Transitive Dependency), không có cột không thuộc khóa chính nào phụ thuộc vào cột không thuộc khóa khác.
-  """
+
