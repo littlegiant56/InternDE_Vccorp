@@ -40,7 +40,7 @@ public class TopURLsAnalysis {
 
         Dataset<Row> clickCount = spark.sql("SELECT campaignId, COUNT(*) AS click_count FROM adlog_table WHERE click_or_view = true GROUP BY campaignId ORDER BY click_count DESC");
 
-        Dataset<Row> num_view = spark.sql("SELECT num_view, COUNT(DISTINCT guid) AS user_count FROM (SELECT campaignId, guid, ROW_NUMBER() OVER (PARTITION BY campaignId, guid ORDER BY time_group.time_create) - 1 AS num_view FROM adlog_table WHERE click_or_view = true) AS clicks GROUP BY num_view ORDER BY num_view");
+        Dataset<Row> num_view = spark.sql("WITH ranked_events AS (SELECT guid, campaignId, time_group.time_create AS time_create, click_or_view, ROW_NUMBER() OVER (PARTITION BY guid, campaignId ORDER BY time_group.time_create) AS event_order FROM adlog_table), cumulative_views AS (SELECT guid, campaignId, time_create, event_order, click_or_view, SUM(CASE WHEN click_or_view = false THEN 1 ELSE 0 END) OVER (PARTITION BY guid, campaignId ORDER BY event_order) AS total_views FROM ranked_events), views_before_click AS (SELECT c.guid, c.campaignId, c.time_create AS click_time, c.total_views - COALESCE(p.total_views, 0) AS views_before_click FROM cumulative_views c LEFT JOIN cumulative_views p ON c.guid = p.guid AND c.campaignId = p.campaignId AND c.event_order > p.event_order AND p.click_or_view = true WHERE c.click_or_view = true) SELECT views_before_click, COUNT(DISTINCT guid) AS user_count FROM views_before_click GROUP BY views_before_click ORDER BY views_before_click");
 
         topViewsPC.show(false);
         topViewsMobile.show(false);
