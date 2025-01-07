@@ -66,7 +66,7 @@
 
 **Ví dụ:**
 
-| num_view | count_users |
+| views_before_click | user_count |
 |------------|-----------|
 | 1          | 200       |
 | 2          | 150       |
